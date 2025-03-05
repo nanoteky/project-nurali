@@ -1,4 +1,4 @@
-
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +7,16 @@
     <title>Nurali's Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Arial", sans-serif;
+            font-stretch: expanded; /* Wider font style */
             margin: 0;
             padding: 0;
-            background-color: #2e7d32; /* Green background */
+            background-color: #6a0dad; /* Purple background */
             text-align: center;
             color: black;
         }
         .container {
-            max-width: 700px; /* Increased size */
+            max-width: 700px;
             margin: 50px auto;
             background: white;
             padding: 30px;
@@ -23,17 +24,22 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
         .profile-placeholder {
-            width: 180px; /* Bigger white space */
+            width: 180px;
             height: 180px;
             background-color: #f0f0f0;
             border-radius: 10px;
             margin: 0 auto 20px;
         }
         h1, p {
-            color: black; /* Always black */
+            color: black;
+        }
+        .section-title {
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 20px;
         }
         button {
-            background-color: #2e7d32;
+            background-color: #6a0dad;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -43,10 +49,10 @@
             font-size: 16px;
         }
         button:hover {
-            background-color: #1b5e20;
+            background-color: #4b0082;
         }
         .light-mode {
-            background-color: #dcedc8 !important;
+            background-color: #e6ccff !important;
         }
     </style>
 </head>
@@ -58,6 +64,15 @@
         <p id="school">Student at BIL</p>
         <p id="intro">Welcome to my portfolio! I am passionate about learning and improving my skills.</p>
         <p id="games">I love computer games and enjoy exploring new gaming experiences.</p>
+
+        <div class="section-title">📞 Contact</div>
+        <p>Phone: +77051879008</p>
+        <p>Address: Bokeikhan 16</p>
+
+        <div class="section-title">🏆 Achievements</div>
+        <p>🥉 Russian Olympiad (Abay region)</p>
+        <p>🥉 KBO Junior 8 grades - Russian Olympiad</p>
+        <p>🥈 Wrestling (Abay region)</p>
         
         <button onclick="toggleLanguage()">Switch to Russian</button>
         <button onclick="toggleLightMode()">Toggle Light Mode</button>
