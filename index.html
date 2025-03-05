@@ -1,1 +1,92 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurali's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2e7d32; /* Green background */
+            text-align: center;
+            color: black;
+        }
+        .container {
+            max-width: 700px; /* Increased size */
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .profile-placeholder {
+            width: 180px; /* Bigger white space */
+            height: 180px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin: 0 auto 20px;
+        }
+        h1, p {
+            color: black; /* Always black */
+        }
+        button {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #1b5e20;
+        }
+        .light-mode {
+            background-color: #dcedc8 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-placeholder"></div> <!-- White panel for profile -->
+        <h1 id="name">Nurali</h1>
+        <p id="school">Student at BIL</p>
+        <p id="intro">Welcome to my portfolio! I am passionate about learning and improving my skills.</p>
+        <p id="games">I love computer games and enjoy exploring new gaming experiences.</p>
+        
+        <button onclick="toggleLanguage()">Switch to Russian</button>
+        <button onclick="toggleLightMode()">Toggle Light Mode</button>
+    </div>
+
+    <script>
+        let isEnglish = true;
+
+        function toggleLanguage() {
+            if (isEnglish) {
+                document.getElementById("name").innerText = "Нурали";
+                document.getElementById("school").innerText = "Ученик в BIL";
+                document.getElementById("intro").innerText = "Добро пожаловать в мое портфолио! Я увлечен обучением и развитием навыков.";
+                document.getElementById("games").innerText = "Я люблю компьютерные игры и наслаждаюсь новыми игровыми опытами.";
+                document.querySelector("button").innerText = "Переключить на английский";
+            } else {
+                document.getElementById("name").innerText = "Nurali";
+                document.getElementById("school").innerText = "Student at BIL";
+                document.getElementById("intro").innerText = "Welcome to my portfolio! I am passionate about learning and improving my skills.";
+                document.getElementById("games").innerText = "I love computer games and enjoy exploring new gaming experiences.";
+                document.querySelector("button").innerText = "Switch to Russian";
+            }
+            isEnglish = !isEnglish;
+        }
+
+        function toggleLightMode() {
+            document.body.classList.toggle("light-mode");
+        }
+    </script>
+
+</body>
+</html>
